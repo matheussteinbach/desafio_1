@@ -12,6 +12,7 @@ class Funcionario(Pessoa):
         self.dependentes.append(Dependente(nome, cpf))
     
     def rem_dependente(self, cpf):
-        for dependente in self.dependentes:
-            if cpf in self.dependentes:
-                self.dependentes.remove(dependente)
+        cpfs = [dependentes.cpf for dependente in self.dependentes]
+        if cpf in cpfs:
+            indice = cpfs.index(cpf)
+            self.dependentes.remove(self.dependentes[indice])
