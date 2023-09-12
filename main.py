@@ -12,6 +12,8 @@ funcionario3 = Funcionario('Theus Desemprego','33333', cargo2)
 
 funcionario1.add_dependente('joao','44444')
 funcionario1.add_dependente('carlos','55555')
+funcionario1.add_dependente('joao da silva','66666')
 
+funcionario1.rem_dependente('44444')
 for dependente in funcionario1.dependentes:
     print(dependente.nome)
